@@ -1,0 +1,30 @@
+:root {
+    --neutral-color: #fffff8;
+    --darker-neutral-color: #f3f3e2;
+    --primary-color: #E4D6A7;
+    --secondary-color: #2c698d;
+    --accent-color: #272643;
+    --font-on-light: #1e1e1e;
+    --font-on-dark: #fffff8;
+}
+
+body {
+    background-color: var(--neutral-color);
+    color: var(--font-on-light);
+    margin: 15% 0 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+}
+#logo {
+    font-weight : bold;
+    font-size: 30px;
+}
