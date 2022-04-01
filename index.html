@@ -1,57 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>mapMenu</title>
-    <meta name="comp1800 template" content="My 1800 App" />
 
-    <!------------------------>
-    <!-- Required meta tags -->
-    <!------------------------>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <title>mapMenu</title>
+  <meta name="comp1800 template" content="My 1800 App" />
 
-    <!------------------------------------------>
-    <!-- Bootstrap Library CSS JS CDN go here -->
-    <!------------------------------------------>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-------------------------------------------------------->
-    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-    <!-------------------------------------------------------->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"/>
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <!-------------------------------------------->
-    <!-- Other libraries and styles of your own -->
-    <!-------------------------------------------->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-    <link rel="stylesheet" href="./styles/styles.css"> 
-  </head>
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
+
+  <!-- our own navbar goes here -->
+  <nav id="navbarPlaceholder"></nav>
+
+  <!-- the body of your page goes here -->
 
   <body>
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
+    <div class="nav">
+      <div class="login"><a href="./login.html">Login</a></div>
+    </div>
+    <header class="main-header"
+      style="background-image: url('./images/main.png');  background-repeat: cover;   background-size: 100% 100%;">
+      <div>
+        <p class="title1">Honest reviews and ratings!</p>
+        <h1 class="title2">map+Menu</h1>
+        <fieldset class="main-search">
+          <label class="search-word" for="main-search">
+            <span class="material-icons-outlined" id="searching">
+              search
+            </span>
+            <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="50"
+              placeholder="food or restaurant" autocomplete="off">
+          </label>
+          <input class="btn-search" type="submit" value="Search">
+        </fieldset>
+      </div>
+    </header>
+    <div class="list-title">Our curated best restaurant in Downtown</div>
+    <ul class="cards">
+      <li class="card">
+        <a href="#">
+          <img src="./images/ourpick.png" alt="">
 
-    <!-- our own navbar goes here -->
-    <nav id="navbarPlaceholder"></nav>
-
-    <!-- the body of your page goes here -->
-    <!-- stuff -->
-
-    <!-- our own footer goes here-->
-    <nav id="footerPlaceholder"></nav>
-
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI_team21.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
-    <script src="./scripts/skeleton.js"></script>
+        </a>
+      </li>
+      <li class="card">
+        <img src="./images/asianfood.jpg" alt="">
+        <a href="#">
+          <figure>
+            <figcaption>
+              <div class="info_inner_wrap">
+                <span class="ls-title">Top 5 asian restaurant</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="card">
+        <img src="./images/pizza.jpg" alt="">
+        <a href="#">
+          <figure>
+            <figcaption>
+              <div class="info_inner_wrap">
+                <span class="ls-title">Top 5 pizzeria</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="card">
+        <img src="./images/dessert.jpg" alt="">
+        <a href="#">
+          <figure>
+            <figcaption>
+              <div class="info_inner_wrap">
+                <span class="ls-title">Top 5 dessert cafe</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
   </body>
+
+  <!-- our own footer goes here-->
+  <nav id="footerPlaceholder"></nav>
+
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_team21.js"></script>
+  <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/skeleton.js"></script>
+</body>
+
 </html>
