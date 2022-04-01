@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>mapMenu</title>
+  <meta name="comp1800 template" content="My 1800 App" />
+
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
+
+  <!-- our own navbar goes here -->
+  <nav id="navbarPlaceholder"></nav>
+
+  <!-- the body of your page goes here -->
+  <!-- search bar -->
+  <div class="searchbar d-flex justify-content-center p-3">
+    <input type="search" class="search border border-secondary bg-neutral p-2" placeholder="Search"
+      style="width: 100%;" />
+    <button type="button" class="btn"><i class="material-icons">search</i></button>
+  </div>
+  <div class="row py-1">
+    <div class="col-6">
+      <div class="card">
+        <div class="embed-responsive">
+        <img class="card-img-top" src="./images/image1.jpg" alt="">
+      </div>
+        <div class="card-body py-0">
+          <h5 class="card-title">Special title</h5>
+          <p class="card-text">With supporting</p>
+          
+        </div>
+      </div> 
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <div class="embed-responsive">
+        <img class="card-img-top" src="./images/image2.jpg" alt="">
+        </div>
+        <div class="card-body py-0">
+          <h5 class="card-title">Special title</h5>
+          <p class="card-text">With supporting</p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row py-1">
+    <div class="col-6">
+      <div class="card">
+        <img class="card-img-top" src="./images/image3.jpg" alt="">
+        <div class="card-body py-0">
+          <h5 class="card-title">Special title</h5>
+          <p class="card-text">With supporting</p>
+          
+        </div>
+      </div> 
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <img class="card-img-top" src="./images/image4.jpg" alt="">
+        <div class="card-body py-0">
+          <h5 class="card-title">Special title</h5>
+          <p class="card-text">With supporting</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row py-1">
+    <div class="col-6">
+      <div class="card">
+        <img class="card-img-top" src="./images/image5.jpg" alt="">
+        <div class="card-body py-0">
+          <h5 class="card-title">Special title</h5>
+          <p class="card-text">With supporting</p>
+          
+        </div>
+      </div> 
+    </div>
+    <div class="col-6">
+      <div class="card ">
+        <img class="card-img-top" src="./images/image6.jpg" alt="">
+        <div class="card-body py-0">
+          <h5 class="card-title">Special title</h5>
+          <p class="card-text">With supporting</p>
+ 
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- our own footer goes here-->
+  <nav id="footerPlaceholder"></nav>
+
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_team21.js"></script>
+  <!-- <script src="./scripts/script.js"></script> -->
+  <script src="./scripts/skeleton.js"></script>
+</body>
+
+</html>
