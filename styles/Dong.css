@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
 :root {
     --support-color: #f3f3e2;
     --darker-neutral-color: #f3f3e2;
@@ -29,13 +30,65 @@ footer {
     font-weight: bold;
     font-size: 30px;
 }
+
 .card {
-  margin-left: 2px;
-  margin-right: 0;
-  left: 3px;
- 
+    margin-left: 2px;
+    margin-right: 0;
+    left: 3px;
+
 }
-.card-img-top{
+
+.card-img-top {
     height: 10rem;
     object-fit: cover;
+}
+
+div.stars {
+    width: 270px;
+    display: inline-block;
+   
+}
+
+input.star {
+    display: none;
+}
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked~label.star:before {
+    content: "\f005";
+    color: #FD4;
+    transition: all .25s;
+}
+
+
+input.star-5:checked~label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked~label.star:before {
+    color: #F62;
+}
+
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+    content: "\f006";
+    font-family: FontAwesome;
+}
+
+
+
+input.star:checked~.rev-box {
+    height: 125px;
+    overflow: visible;
 }

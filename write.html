@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>MapMenu</title>
+  <meta name="comp1800 template" content="My 1800 App" />
+
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/Dong.css">
+</head>
+
+<body>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
+
+  <!-- our own navbar goes here -->
+  <nav id="navbarPlaceholder"></nav>
+
+  <!-- the body of your page goes here -->
+  <!-- stuff -->
+  <div class="container">
+    <div class="col-12">
+      <label for="name" class="form-label">
+        <h3 class="mt-4 p-0">Resturant Name</h3>
+      </label>
+      <input type="text" class="form-control" id="name" />
+    </div>
+    <div class="col-12">
+      <label for="food" class="form-label">
+        <h3 class="mt-2 p-0">Food name</h3>
+      </label>
+      <input type="text" class="form-control" id="name" />
+    </div>
+    <div class="col-12">
+      <label for="location" class="form-label">
+        <h3 class="mt-2 p-0" id="location">Location</h3>
+      </label>
+      <input type="text" class="form-control" id="inputTitle" />
+    </div>
+    <label for="satisfaction" class="form-label">
+      <h3 class="mt-2 p-0" id="satisfaction">Satisfaction</h3>
+    </label>
+    <div class="col-12 d-flex justify-content-center mt-0">
+      <div class="stars">
+        <form action="">
+          <input class="star star-5" id="star-5" type="radio" name="star" />
+          <label class="star star-5" for="star-5"></label>
+          <input class="star star-4" id="star-4" type="radio" name="star" />
+          <label class="star star-4" for="star-4"></label>
+          <input class="star star-3" id="star-3" type="radio" name="star" />
+          <label class="star star-3" for="star-3"></label>
+          <input class="star star-2" id="star-2" type="radio" name="star" />
+          <label class="star star-2" for="star-2"></label>
+          <input class="star star-1" id="star-1" type="radio" name="star" />
+          <label class="star star-1" for="star-1"></label>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <label for="name" class="form-label">
+        <h3 class="mt-2 p-0">Food type</h3>
+      </label>
+      <div class="col-6">
+        <input class="form-check-input" value="vegan" type="checkbox">
+        <label class="form-check-label" for="flexCheckDefault">
+          general
+        </label>
+      </div>
+      <div class="col-6">
+        <input class="form-check-input" value="halal" type="checkbox">
+        <label class="form-check-label" for="flexCheckDefault">
+          vegan
+        </label>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <input class="form-check-input" value="vegan" type="checkbox">
+        <label class="form-check-label" for="flexCheckDefault">
+          kosher
+        </label>
+      </div>
+      <div class="col-6">
+        <input class="form-check-input" value="halal" type="checkbox">
+        <label class="form-check-label" for="flexCheckDefault">
+          halal
+        </label>
+      </div>
+
+    </div>
+    <div class="col-12">
+      <label for="description" class="form-label">
+        <h3 class="mt-2 p-0" id="description">Description</h3>
+      </label>
+      <textarea class="form-control" type="text" aria-label="With textarea"></textarea>
+    </div>
+    <div class="col-12 py-2">
+      <input type="file" class="form-control" id="upload">
+      <label class="input-group-text" for="upload">Upload</label>
+    </div>
+
+    <div class="col-12 py-1 d-flex justify-content-center">
+      <button type="button" class="btn btn-primary btn-lg">Submit</button>
+      <button type="button" class="btn btn-warning btn-lg mx-2">Cancel</button>
+    </div>
+
+
+
+
+
+
+  </div>
+  </div>
+
+  <!-- our own footer goes here-->
+  <nav id="footerPlaceholder"></nav>
+
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_team21.js"></script>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/skeleton.js"></script>
+</body>
+
+</html>
