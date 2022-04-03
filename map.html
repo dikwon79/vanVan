@@ -26,11 +26,22 @@
 </head>
 
 <body>
+    <nav id="navbarPlaceholder"></nav>
     <div id="map"></div>
+    <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box" /> -->
+    <div class="input-group mb-3">
+        <input id="pac-input" type="text" class="form-control" placeholder="food or restaurant"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+    </div>
+
+    <!-- Restaurant detail cards -->
+    <nav id="footerPlaceholder"></nav>
     <script src="./scripts/map.js"></script>
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSQ8gdhK51uacMX8PACFXAycz7ibGjda0&callback=initMap&v=weekly"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSQ8gdhK51uacMX8PACFXAycz7ibGjda0&callback=initMap&initAutocomplete&libraries=places"
         async></script>
+    <script src="./scripts/skeleton.js"></script>
+
 </body>
 
 </html>
