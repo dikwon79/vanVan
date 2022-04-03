@@ -242,7 +242,28 @@ a {
         height: 100%;
     }
 
+    .main-search {
+        margin: 7rem auto 0 auto;
+        height: 2rem;
+        width: 80%;
+        border-radius: 80px;
+        overflow: hidden;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
+    .btn-search {
+        width: 80%;
+        font-size: .9rem;
+        line-height: 3rem;
+        border-radius: 80px;
+        border: none;
+        background-color: #ff7100;
+        color: white;
+        cursor: pointer;
+    }
 
 
 
