@@ -13,7 +13,7 @@ body {
     height: 200px;
     width: 200px;
     position: absolute;
-    top: 20%;
+    top: 13rem;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
@@ -77,6 +77,8 @@ body {
 #time {
     font-size: .8rem;
 }
+
+
 
 .user-data {
     display: flex;
