@@ -265,6 +265,9 @@ a {
         cursor: pointer;
     }
 
+    .list-title {
+        margin-top: 2rem;
 
+    }
 
 }

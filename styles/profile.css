@@ -89,20 +89,10 @@ body {
 }
 
 .review,
-.bookmark,
+.visited,
 .photo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.bookmark {
-    margin-bottom: .8rem;
-}
-
-
-.profile-bookmark span {
-    font-size: 1rem;
-    cursor: pointer;
 }
