@@ -1,7 +1,7 @@
 :root {
     --neutral-color: #fffff8;
     --darker-neutral-color: #f3f3e2;
-    --primary-color: #E4D6A7;
+    --primary-color: #f17a26;
     --secondary-color: #2c698d;
     --accent-color: #272643;
     --font-on-light: #1e1e1e;
@@ -11,10 +11,13 @@
 body {
     background-color: var(--neutral-color);
     color: var(--font-on-light);
-    margin: 15% 0 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
+}
+
+#navbarPlaceholder {
+    display: none;
 }
 
 nav {
@@ -28,6 +31,8 @@ footer {
 #logo {
     font-weight: bold;
     font-size: 30px;
+    color: white;
+
 }
 
 #input {
@@ -145,12 +150,12 @@ input[type="text"]:placeholder-shown {
     text-decoration: none;
 }
 
-.main-header {
+/* .main-header {
     margin-bottom: 3rem;
-}
+} */
 
 .cards {
-    margin-top: 10rem;
+    margin: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;
@@ -158,6 +163,10 @@ input[type="text"]:placeholder-shown {
 
 .card {
     text-align: center;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
 }
 
 .list-title {
@@ -168,4 +177,73 @@ input[type="text"]:placeholder-shown {
 .card img {
     height: 300px;
     width: 450px;
+}
+
+.main-search-mobile {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1088px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #navbarPlaceholder {
+        display: block;
+    }
+
+    .main-header {
+        display: none;
+    }
+
+    .main-search-mobile {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 3rem;
+        font-size: 1rem;
+    }
+
+    #main-search {
+        font-size: 1rem;
+    }
+
+    .btn-search {
+        font-size: 1rem;
+        border-radius: 80px;
+        border: none;
+        background-color: #ff7100;
+        color: white;
+        cursor: pointer;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .list-title {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .card img {
+        width: 80%;
+        height: 100%;
+    }
+
+
+
+
+
 }

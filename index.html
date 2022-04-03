@@ -18,7 +18,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -33,6 +33,8 @@
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -47,73 +49,89 @@
 
     <!-- the body of your page goes here -->
 
-    <body>
-        <div class="nav">
-            <div class="login"><a href="./login.html">Login</a></div>
-        </div>
-        <header class="main-header"
-            style="background-image: url('./images/main.png');  background-repeat: cover;   background-size: 100% 100%;">
-            <div>
-                <p class="title1">Honest reviews and ratings!</p>
-                <h1 class="title2">map+Menu</h1>
-                <fieldset class="main-search">
-                    <label class="search-word" for="main-search">
-                        <span class="material-icons-outlined" id="searching">
-                            search
-                        </span>
-                        <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="50"
-                            placeholder="food or restaurant" autocomplete="off">
-                    </label>
-                    <input class="btn-search" type="submit" value="Search">
-                </fieldset>
-            </div>
-        </header>
-        <div class="list-title">Our curated best restaurant in Downtown</div>
-        <ul class="cards">
-            <li class="card">
-                <a href="#">
-                    <img src="./images/ourpick.png" alt="">
 
-                </a>
-            </li>
-            <li class="card">
+    <div class="nav">
+        <div class="login"><a href="./login.html">Login</a></div>
+    </div>
+    <fieldset class="main-search-mobile">
+        <label class="search-word" for="main-search">
+            <span class="material-icons-outlined" id="searching">
+                search
+            </span>
+            <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="50"
+                placeholder="food or restaurant" autocomplete="off">
+        </label>
+        <input class="btn-search" type="submit" value="Search">
+    </fieldset>
+    <header class="main-header"
+        style="background-image: url('./images/main.png');  background-repeat: cover;   background-size: 100% 100%;">
+        <div>
+            <p class="title1">Honest reviews and ratings!</p>
+            <h1 class="title2">mapMenu</h1>
+            <fieldset class="main-search">
+                <label class="search-word" for="main-search">
+                    <span class="material-icons-outlined" id="searching">
+                        search
+                    </span>
+                    <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="50"
+                        placeholder="food or restaurant" autocomplete="off">
+                </label>
+                <input class="btn-search" type="submit" value="Search">
+            </fieldset>
+        </div>
+    </header>
+    <div class="list-title">Our curated best restaurant in Downtown</div>
+    <ul class="cards">
+        <li class="card">
+            <a href="#">
+                <img src="./images/ourpick.png" alt="">
+                <figure>
+                    <figcaption>
+                        <div class="info_inner_wrap">
+                            <span class="ls-title">Top 5 restaurants</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+        <li class="card">
+            <a href="#">
                 <img src="./images/asianfood.jpg" alt="">
-                <a href="#">
-                    <figure>
-                        <figcaption>
-                            <div class="info_inner_wrap">
-                                <span class="ls-title">Top 5 asian restaurant</span>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li class="card">
+                <figure>
+                    <figcaption>
+                        <div class="info_inner_wrap">
+                            <span class="ls-title">Top 5 asian restaurant</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+        <li class="card">
+            <a href="#">
                 <img src="./images/pizza.jpg" alt="">
-                <a href="#">
-                    <figure>
-                        <figcaption>
-                            <div class="info_inner_wrap">
-                                <span class="ls-title">Top 5 pizzeria</span>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-            <li class="card">
+                <figure>
+                    <figcaption>
+                        <div class="info_inner_wrap">
+                            <span class="ls-title">Top 5 pizzeria</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+        <li class="card">
+            <a href="#">
                 <img src="./images/dessert.jpg" alt="">
-                <a href="#">
-                    <figure>
-                        <figcaption>
-                            <div class="info_inner_wrap">
-                                <span class="ls-title">Top 5 dessert cafe</span>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </a>
-            </li>
-        </ul>
-    </body>
+                <figure>
+                    <figcaption>
+                        <div class="info_inner_wrap">
+                            <span class="ls-title">Top 5 dessert cafe</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </li>
+    </ul>
+
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
