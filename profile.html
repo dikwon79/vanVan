@@ -11,28 +11,53 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+        </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 <title>Profile Page</title>
 
 <body>
-    <center>
-        <div class="box" id="box" name="myForm" onsubmit="validateForm()">
-            <img src="./images/profile.jpg">
-            <input type="file" name="" id="file" accept="image/*">
-            <label for="file" id="image">Edit pic</label>
-            <input type="text" name="" id="name" placeholder="User Name">
-            <input type="email" name="" placeholder="Email">
-            <input type="text" name="" placeholder="Phone Number">
-            <input type="text" name="" placeholder="Date of Birth">
-            <input type="text" name="" placeholder="Gender">
-            <button id="cancel" style="float: left; margin: 10px 0 0 18.2%">Cancel</button>
-            <button id="done" style="float: right; margin: 10px 18.2% 0 0">Done</button>
-
+    <div class="wrapper-profile">
+        <div class="top-wraper">
+            <div class="top-main-profile">
+                <div class="profile-pic-div">
+                    <img src="./images/profile.jpg" alt="" id="photo">
+                    <input type="file" id="file">
+                    <label for="file" id="uploadBtn">Choose a photo</label>
+                </div>
+            </div>
+            <div class="username">Jun Ho Han</div>
+            <div class="date">Joined Date: Mar 6, 2022</div>
+            <input type="text" value="Edit" class="edit">
         </div>
-    </center>
+        <div class="timeline">
+            <div class="timeline-title">
+                <span class="material-icons-outlined" id="time">
+                    schedule
+                </span>
+                <p>Timeline</p>
+            </div>
+            <div class="user-data">
+                <div class="review">
+                    <p class="profile-timeline-titles">Review</p>
+                    <p>0</p>
+                </div>
+                <div class="bookmark">
+                    <p class="profile-timeline-titles">Bookmark</p>
+                    <span class="material-icons-outlined">
+                        bookmark_border
+                    </span>
+                </div>
+                <div class="photo">
+                    <p class="profile-timeline-titles">Photo</p>
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="./scripts/firebaseAPI_team21.js"></script>
-    <script src="./scripts/profile.js"></script>
+    <script src="./scripts/profile.js" defer></script>
 </body>
 
 </html>
