@@ -48,7 +48,10 @@ div.stars {
     display: inline-block;
    
 }
-
+.welcome{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color : #2c698d;
+}
 input.star {
     display: none;
 }
