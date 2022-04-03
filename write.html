@@ -52,35 +52,36 @@
       <label for="name" class="form-label">
         <h3 class="mt-4 p-0">Resturant Name</h3>
       </label>
-      <input type="text" class="form-control" id="name" />
+      <input type="text" class="form-control" id="rname" />
     </div>
     <div class="col-12">
       <label for="food" class="form-label">
         <h3 class="mt-2 p-0">Food name</h3>
       </label>
-      <input type="text" class="form-control" id="name" />
+      <input type="text" class="form-control" id="fname" />
     </div>
     <div class="col-12">
       <label for="location" class="form-label">
         <h3 class="mt-2 p-0" id="location">Location</h3>
       </label>
-      <input type="text" class="form-control" id="inputTitle" />
+      <input type="text" class="form-control" id="locations" />
     </div>
     <label for="satisfaction" class="form-label">
-      <h3 class="mt-2 p-0" id="satisfaction">Satisfaction</h3>
+      <h3 class="mt-2 p-0">Satisfaction</h3>
     </label>
     <div class="col-12 d-flex justify-content-center mt-0">
       <div class="stars">
         <form action="">
-          <input class="star star-5" id="star-5" type="radio" name="star" />
+          <input type="hidden" id="satisfaction" value="">
+          <input class="star star-5" id="star-5" type="radio" name="star" onclick="ranking(5)"/>
           <label class="star star-5" for="star-5"></label>
-          <input class="star star-4" id="star-4" type="radio" name="star" />
+          <input class="star star-4" id="star-4" type="radio" name="star" onclick="ranking(4)"/>
           <label class="star star-4" for="star-4"></label>
-          <input class="star star-3" id="star-3" type="radio" name="star" />
+          <input class="star star-3" id="star-3" type="radio" name="star" onclick="ranking(3)"/>
           <label class="star star-3" for="star-3"></label>
-          <input class="star star-2" id="star-2" type="radio" name="star" />
+          <input class="star star-2" id="star-2" type="radio" name="star" onclick="ranking(2)"/>
           <label class="star star-2" for="star-2"></label>
-          <input class="star star-1" id="star-1" type="radio" name="star" />
+          <input class="star star-1" id="star-1" type="radio" name="star" onclick="ranking(1)"/>
           <label class="star star-1" for="star-1"></label>
         </form>
       </div>
@@ -90,13 +91,13 @@
         <h3 class="mt-2 p-0">Food type</h3>
       </label>
       <div class="col-6">
-        <input class="form-check-input" value="vegan" type="checkbox">
+        <input class="form-check-input" id="general" type="checkbox">
         <label class="form-check-label" for="flexCheckDefault">
           general
         </label>
       </div>
       <div class="col-6">
-        <input class="form-check-input" value="halal" type="checkbox">
+        <input class="form-check-input" id="vegan" type="checkbox">
         <label class="form-check-label" for="flexCheckDefault">
           vegan
         </label>
@@ -105,13 +106,13 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <input class="form-check-input" value="vegan" type="checkbox">
+        <input class="form-check-input" id="kosher" type="checkbox">
         <label class="form-check-label" for="flexCheckDefault">
           kosher
         </label>
       </div>
       <div class="col-6">
-        <input class="form-check-input" value="halal" type="checkbox">
+        <input class="form-check-input" id="halal" type="checkbox">
         <label class="form-check-label" for="flexCheckDefault">
           halal
         </label>
@@ -120,9 +121,9 @@
     </div>
     <div class="col-12">
       <label for="description" class="form-label">
-        <h3 class="mt-2 p-0" id="description">Description</h3>
+        <h3 class="mt-2 p-0">Description</h3>
       </label>
-      <textarea class="form-control" type="text" aria-label="With textarea"></textarea>
+      <textarea class="form-control" id="description" type="text" aria-label="With textarea"></textarea>
     </div>
     <div class="col-12 py-2">
       <input type="file" class="form-control" id="upload">
@@ -130,12 +131,9 @@
     </div>
 
     <div class="col-12 py-1 d-flex justify-content-center">
-      <button type="button" class="btn btn-primary btn-lg" onclick="write();">Submit</button>
+      <button type="button" class="btn btn-primary btn-lg" onclick="writeSubmit()">Submit</button>
       <button type="button" class="btn btn-warning btn-lg mx-2">Cancel</button>
     </div>
-
-
-
 
 
 
@@ -151,6 +149,7 @@
   <script src="./scripts/firebaseAPI_team21.js"></script>
   <script src="./scripts/script.js"></script>
   <script src="./scripts/skeleton.js"></script>
+  <script src="./scripts/write.js"></script>
 </body>
 
 </html>
