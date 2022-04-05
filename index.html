@@ -72,98 +72,97 @@
         </div>
     </div>
 
+    <!-- searchbox -->
+    <div class="input-group">
+        <input type="text" class="form-control fs-5 pac-input " placeholder="food or restaurant">
+    </div>
 
-    <fieldset class="main-search">
-        <label class="search-word" for="main-search">
-            <span class="material-icons-outlined" id="searching">
-                search
-            </span>
-            <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="50"
-                placeholder="food or restaurant" autocomplete="off">
-        </label>
-        <input class="btn-search" type="submit" value="Search">
-    </fieldset>
-    <header class="main-header"
-        style="background-image: url('./images/main.png');  background-repeat: cover;   background-size: 100% 100%;">
-        <div>
-            <p class="title1">Honest reviews and ratings!</p>
-            <h1 class="title2">mapMenu</h1>
-            <fieldset class="main-search">
-                <label class="search-word" for="main-search">
-                    <span class="material-icons-outlined" id="searching">
-                        search
-                    </span>
-                    <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="10"
-                        placeholder="food or restaurant" autocomplete="off">
-                </label>
-                <input class="btn-search" type="submit" value="Search">
-            </fieldset>
-        </div>
-    </header>
-    <div class="list-title">Our curated best restaurant in Downtown</div>
-    <ul class="cards">
-        <li class="card">
-            <a href="#">
-                <img src="./images/ourpick.png" alt="">
-                <figure>
-                    <figcaption>
-                        <div class="info_inner_wrap">
-                            <span class="ls-title">Top 5 restaurants</span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </a>
-        </li>
-        <li class="card">
-            <a href="#">
-                <img src="./images/asianfood.jpg" alt="">
-                <figure>
-                    <figcaption>
-                        <div class="info_inner_wrap">
-                            <span class="ls-title">Top 5 asian restaurant</span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </a>
-        </li>
-        <li class="card">
-            <a href="#">
-                <img src="./images/pizza.jpg" alt="">
-                <figure>
-                    <figcaption>
-                        <div class="info_inner_wrap">
-                            <span class="ls-title">Top 5 pizzeria</span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </a>
-        </li>
-        <li class="card">
-            <a href="#">
-                <img src="./images/dessert.jpg" alt="">
-                <figure>
-                    <figcaption>
-                        <div class="info_inner_wrap">
-                            <span class="ls-title">Top 5 dessert cafe</span>
-                        </div>
-                    </figcaption>
-                </figure>
-            </a>
-        </li>
-    </ul>
+    <div class="landing-page">
+        <header class="main-header"
+            style="background-image: url('./images/main.png');  background-repeat: cover;   background-size: 100% 100%;">
+            <div>
+                <p class="title1">Honest reviews and ratings!</p>
+                <h1 class="title2">mapMenu</h1>
+                <fieldset class="main-search">
+                    <label class="search-word" for="main-search">
+                        <span class="material-icons-outlined" id="searching">
+                            search
+                        </span>
+                        <input id="main-search" class="HomeSearchInput" name="main-search" type="text" maxlength="10"
+                            placeholder="food or restaurant" autocomplete="off">
+                    </label>
+                    <input class="btn-search" type="submit" value="Search">
+                </fieldset>
+            </div>
+        </header>
+        <div class="list-title">Our curated best restaurant in Downtown</div>
+        <ul class="cards">
+            <li class="card">
+                <a href="#">
+                    <img src="./images/ourpick.png" alt="">
+                    <figure>
+                        <figcaption>
+                            <div class="info_inner_wrap">
+                                <span class="ls-title">Top 5 restaurants</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li class="card">
+                <a href="#">
+                    <img src="./images/asianfood.jpg" alt="">
+                    <figure>
+                        <figcaption>
+                            <div class="info_inner_wrap">
+                                <span class="ls-title">Top 5 asian restaurant</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li class="card">
+                <a href="#">
+                    <img src="./images/pizza.jpg" alt="">
+                    <figure>
+                        <figcaption>
+                            <div class="info_inner_wrap">
+                                <span class="ls-title">Top 5 pizzeria</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li class="card">
+                <a href="#">
+                    <img src="./images/dessert.jpg" alt="">
+                    <figure>
+                        <figcaption>
+                            <div class="info_inner_wrap">
+                                <span class="ls-title">Top 5 dessert cafe</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </div>
 
 
+    <div id="map"></div>
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
-
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSQ8gdhK51uacMX8PACFXAycz7ibGjda0&callback=initMap&initAutocomplete&libraries=places"
+        async></script>
     <script src="./scripts/firebaseAPI_team21.js"></script>
+    <script src="./scripts/enter.js"></script>
     <script src="./scripts/map.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/enter.js"></script>
 </body>
 
 </html>

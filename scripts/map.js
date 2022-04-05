@@ -6,7 +6,7 @@ function initMap() {
         zoom: 15,
     });
 
-    const input = document.getElementById("pac-input");
+    const input = document.querySelector(".pac-input");
     const searchBox = new google.maps.places.SearchBox(input);
 
 
