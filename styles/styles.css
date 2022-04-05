@@ -18,25 +18,38 @@ body {
 }
 
 #pac-input {
-    margin-top: 20%;
-    text-align: center;
     font-size: .9rem;
     outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    text-align: center;
 }
 
+.card-details {
+    display: none;
+}
+
+#footerPlaceholder {
+    margin-top: 10rem;
+}
 
 
 #map {
     height: 50%;
+    margin-bottom: 2rem;
 }
 
 #myModal {
     margin-top: 10rem;
 }
 
+.landing-page {
+    padding-top: 3rem;
+}
 
-navbarPlaceholder {
-    display: none;
+
+#navbarPlaceholder {
+    margin-bottom: 10rem;
 }
 
 nav {
@@ -119,13 +132,12 @@ fieldset {
 }
 
 input[type="text"]:placeholder-shown {
-    line-height: 50px;
     color: #cbcbcb;
     opacity: 1;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border: none;
-    padding-left: 2rem;
     outline: none;
+    text-align: center;
 }
 
 .btn-search {
@@ -148,13 +160,7 @@ input[type="text"]:placeholder-shown {
     cursor: pointer;
 }
 
-.search-word {
-    color: grey;
-}
 
-#searching {
-    font-size: 2rem;
-}
 
 .HomeSearchInput {
     font-size: 2rem;
@@ -169,9 +175,6 @@ input[type="text"]:placeholder-shown {
     text-decoration: none;
 }
 
-/* .main-header {
-    margin-bottom: 3rem;
-} */
 
 .cards {
     margin: 5rem;

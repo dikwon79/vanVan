@@ -9,6 +9,7 @@ document.querySelector("#pac-input").addEventListener("keyup", function (e) {
             myModal.toggle();
         } else {
             document.querySelector('.landing-page').style.display = "none"
+            document.querySelector('.card-details').style.display = "grid"
 
 
         }
