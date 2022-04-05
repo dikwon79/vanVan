@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
+
 :root {
-    --support-color: #f3f3e2;
+    --support-color: #fffff8;
     --darker-neutral-color: #f3f3e2;
-    --main-color: #E4D6A7;
+    --main-color: #f17a26;
     --secondary-color: #2c698d;
     --accent-color: #272643;
     --font-on-light: #1e1e1e;
@@ -45,12 +46,14 @@ footer {
 div.stars {
     width: 270px;
     display: inline-block;
-   
+
 }
-.welcome{
+
+.welcome {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color : #2c698d;
+    color: #2c698d;
 }
+
 input.star {
     display: none;
 }
@@ -93,4 +96,28 @@ label.star:before {
 input.star:checked~.rev-box {
     height: 125px;
     overflow: visible;
+}
+
+.search {
+
+    position: relative;
+    width: 300px;
+    
+}
+
+.search input {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    
+}
+
+.search img {
+    position: absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
 }

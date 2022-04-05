@@ -47,11 +47,14 @@
 
   <!-- the body of your page goes here -->
   <!-- search bar -->
-  <div class="searchbar d-flex justify-content-center p-3">
-    <input type="search" class="search border border-secondary bg-neutral p-2" placeholder="Search"
-      style="width: 100%;" />
-    <button type="button" class="btn"><i class="material-icons">search</i></button>
+ 
+  <div class="input-group rounded d-flex justify-content-center p-4">
+    <input type="search" id="searchbar" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    <span class="input-group-text border-1" id="search-addon" onclick="search()">
+      <i class="material-icons">search</i>
+    </span>
   </div>
+
   <div id="carddata"></div>
 
 
