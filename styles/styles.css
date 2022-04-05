@@ -8,6 +8,11 @@
     --font-on-dark: #fffff8;
 }
 
+
+#myModal {
+    margin-top: 10rem;
+}
+
 body {
     background-color: var(--neutral-color);
     color: var(--font-on-light);

@@ -20,6 +20,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
 
+
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
     <!-------------------------------------------------------->
@@ -48,11 +49,30 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-
-
     <div class="nav">
         <div class="login"><a href="./login.html">Login</a></div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please enter food or restaurant you want to visit.
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <fieldset class="main-search">
         <label class="search-word" for="main-search">
             <span class="material-icons-outlined" id="searching">
@@ -139,10 +159,11 @@
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
+
     <script src="./scripts/firebaseAPI_team21.js"></script>
+    <script src="./scripts/map.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/enter.js"></script>
-    <script src="./scripts/map.js"></script>
 </body>
 
 </html>
