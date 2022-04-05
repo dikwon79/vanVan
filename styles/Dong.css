@@ -31,14 +31,13 @@ footer {
     font-size: 30px;
 }
 
-.card {
+#carddata .card {
     margin-left: 2px;
     margin-right: 0;
     left: 3px;
-
 }
 
-.card-img-top {
+#carddata .card-img-top {
     height: 10rem;
     object-fit: cover;
 }

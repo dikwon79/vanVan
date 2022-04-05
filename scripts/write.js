@@ -43,7 +43,7 @@ function writeSubmit() {
                         console.log(doc.id);
                         let picture = document.getElementById("fileUpload");
                         uploadimage(doc.id, picture.files[0]);
-                        //window.location.href = "card.html";
+                        window.location.href = "card.html";
                         
 
                     })
@@ -66,7 +66,7 @@ function uploadimage(id, filename) {
         photoRef
         .getDownloadURL() //get URL of the uploade file
         .then(function (url) {
-          console.log(url); // Save the URL into users collection
+          console.log(url); 
           db.collection("mapmenu").doc(id).update({
             image_map: url,
           });
