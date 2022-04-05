@@ -8,16 +8,23 @@
     --font-on-dark: #fffff8;
 }
 
-.pac-input {
+html,
+body {
+    background-color: var(--neutral-color);
+    color: var(--font-on-light);
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#pac-input {
     margin-top: 20%;
     text-align: center;
     font-size: .9rem;
     outline: none;
 }
 
-.pac-input:focus {
-    outline: none;
-}
+
 
 #map {
     height: 50%;
@@ -27,14 +34,6 @@
     margin-top: 10rem;
 }
 
-html,
-body {
-    background-color: var(--neutral-color);
-    color: var(--font-on-light);
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-}
 
 navbarPlaceholder {
     display: none;
