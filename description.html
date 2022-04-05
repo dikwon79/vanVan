@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MapMenu</title>
+    <meta name="comp1800 template" content="My 1800 App" />
+
+    <!------------------------>
+    <!-- Required meta tags -->
+    <!------------------------>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+
+    <!------------------------------------------>
+    <!-- Bootstrap Library CSS JS CDN go here -->
+    <!------------------------------------------>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+    <!-------------------------------------------->
+    <!-- Other libraries and styles of your own -->
+    <!-------------------------------------------->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/description.css">
+</head>
+
+<body>
+
+    <!-- carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/asianfood.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/image3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="restaurant-description-box">
+        <div class="description-box">
+            <div class="description-box_left">
+                <div class="description-box_left_name">Alla Prima</div>
+            </div>
+            <div class="description-box_right">4.8</div>
+        </div>
+        <div class="fake-views">
+            <div class="view-icon icons">
+                <span class="material-icons-outlined">
+                    visibility
+                </span>
+                <span>195,345</span>
+            </div>
+            <div class="pencil-icon icons">
+                <span class="material-icons-outlined">
+                    edit
+                </span>
+                <span>142</span>
+            </div>
+            <div class="star-icon icons">
+                <span class="material-icons-outlined">
+                    star
+                </span>
+                <span>1414</span>
+            </div>
+        </div>
+        <div class="user-interaction">
+            <div class="review-icon">
+                <span class="material-icons-outlined">
+                    edit
+                </span>
+                <p>Review</p>
+            </div>
+            <div class="bookmark-icon">
+                <span class="material-icons-outlined">
+                    star_border
+                </span>
+                <p>Bookmark</p>
+            </div>
+            <div class="visited-icon">
+                <span class="material-icons-outlined">
+                    location_on
+                </span>
+                <p>Visited</p>
+            </div>
+        </div>
+        <div class="dummy-review">
+            <div class="review-top">
+                <div class="dummy-reivew-username">Paul</div>
+                <div class="old-review-rating">4.8</div>
+            </div>
+            <div class="review-bot">
+                <p class="user-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quos suscipit
+                    assumenda sunt neque recusandae enim? Reprehenderit earum architecto eius. Doloribus tempora
+                    adipisci
+                    totam officia explicabo! Vel quidem perferendis provident.</p>
+                <img src="./images/pizza.jpg" alt="">
+            </div>
+        </div>
+        <div class="dummy-review">
+            <div class="review-top">
+                <div class="dummy-reivew-username">Paul</div>
+                <div class="old-review-rating">4.8</div>
+            </div>
+            <div class="review-bot">
+                <p class="user-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quos suscipit
+                    assumenda sunt neque recusandae enim? Reprehenderit earum architecto eius. Doloribus tempora
+                    adipisci
+                    totam officia explicabo! Vel quidem perferendis provident.</p>
+                <img src="./images/pizza.jpg" alt="">
+            </div>
+        </div>
+        <div class="dummy-review">
+            <div class="review-top">
+                <div class="dummy-reivew-username">Paul</div>
+                <div class="old-review-rating">4.8</div>
+            </div>
+            <div class="review-bot">
+                <p class="user-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quos suscipit
+                    assumenda sunt neque recusandae enim? Reprehenderit earum architecto eius. Doloribus tempora
+                    adipisci
+                    totam officia explicabo! Vel quidem perferendis provident.</p>
+                <img src="./images/pizza.jpg" alt="">
+            </div>
+        </div>
+        <div class="dummy-review">
+            <div class="review-top">
+                <div class="dummy-reivew-username">Paul</div>
+                <div class="old-review-rating">4.8</div>
+            </div>
+            <div class="review-bot">
+                <p class="user-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quos suscipit
+                    assumenda sunt neque recusandae enim? Reprehenderit earum architecto eius. Doloribus tempora
+                    adipisci
+                    totam officia explicabo! Vel quidem perferendis provident.</p>
+                <img src="./images/pizza.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- our own footer goes here-->
+    <nav id="footerPlaceholder"></nav>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="./scripts/firebaseAPI_team21.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/skeleton.js"></script>
+</body>
+
+</html>

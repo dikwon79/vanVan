@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restaurant-description-box {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+
+}
+
+.dummy-review img {
+    width: 80%;
+}
+
+.restaurant-description-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description-box_left {
+    display: flex;
+}
+
+.user-interaction {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-box_left_name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.description-box_right {
+    font-size: 2rem;
+    color: darkorange;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.fake-views {
+    display: flex;
+    font-size: .9rem;
+    gap: 2rem;
+}
+
+.user-interaction {
+    font-size: 1.3rem;
+    margin: 3rem;
+    border-bottom: 1px grey solid;
+}
+
+.review-icon,
+.bookmark-icon,
+.visited-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.dummy-reivew-username {
+    font-size: 1.4rem;
+}
+
+.dummy-review {
+    margin: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px grey solid;
+}

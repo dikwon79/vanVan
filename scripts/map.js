@@ -10,10 +10,10 @@ function initMap() {
 
     const locationButton = document.createElement("button");
 
-    locationButton.textContent = "Pan to Current Location";
-    locationButton.classList.add("custom-map-control-button");
+    locationButton.textContent = "Show my location";
     map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
     locationButton.addEventListener("click", () => {
+
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -22,10 +22,12 @@ function initMap() {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude,
                     };
+                    const marker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                    })
 
                     infoWindow.setPosition(pos);
-                    infoWindow.setContent("Location found.");
-                    infoWindow.open(map);
                     map.setCenter(pos);
                 },
                 () => {
@@ -37,6 +39,8 @@ function initMap() {
             handleLocationError(false, infoWindow, map.getCenter());
         }
     });
+
+
 
 
 
