@@ -26,6 +26,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
@@ -126,13 +127,14 @@
       <textarea class="form-control" id="description" type="text" aria-label="With textarea"></textarea>
     </div>
     <div class="col-12 py-2">
-      <input type="file" class="form-control" id="upload">
+      <input type="file" class="form-control" name="fileupload" id="fileUpload">
       <label class="input-group-text" for="upload">Upload</label>
     </div>
 
     <div class="col-12 py-1 d-flex justify-content-center">
       <button type="button" class="btn btn-primary btn-lg" onclick="writeSubmit()">Submit</button>
       <button type="button" class="btn btn-warning btn-lg mx-2">Cancel</button>
+      
     </div>
 
 

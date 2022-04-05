@@ -1,9 +1,10 @@
-function ranking(a){
+function ranking(a) {
     document.getElementById("satisfaction").value = a;
     console.log(a);
 }
+
 function writeSubmit() {
-   
+  
     let rname = document.getElementById("rname").value;
     let fname = document.getElementById("fname").value;
     let locations = document.getElementById("locations").value;
@@ -13,18 +14,18 @@ function writeSubmit() {
     let type_kosher = document.querySelector('#kosher').checked;
     let type_halal = document.querySelector('#halal').checked;
     let description = document.getElementById('description').value;
-   
+
 
     firebase.auth().onAuthStateChanged(user => {
         console.log(user);
         if (user) {
             var currentUser = db.collection("Users").doc(user.uid)
             var userID = user.uid;
-            
+
             //get the document for current user.
             currentUser.get()
                 .then(userDoc => {
-                    
+
                     // var userEmail = userDoc.data().email;
                     db.collection("mapmenu").add({
                         Rname: rname,
@@ -36,11 +37,15 @@ function writeSubmit() {
                         vegan: type_vegan,
                         halal: type_halal,
                         kosher: type_kosher,
+                        image_map: "",
 
-                    }).then((doc)=>{
+                    }).then((doc) => {
                         console.log(doc.id);
-                        window.location.href = "card.html";
-                      
+                        let picture = document.getElementById("fileUpload");
+                        uploadimage(doc.id, picture.files[0]);
+                        //window.location.href = "card.html";
+                        
+
                     })
                 })
         } else {
@@ -49,3 +54,23 @@ function writeSubmit() {
     });
 
 }
+
+function uploadimage(id, filename) {
+    let storageRef = firebase.storage().ref();
+    let photoRef = storageRef.child("food/" + id + ".jpg");
+    var metadata = {
+      contentType: filename.type,
+    };
+  
+    photoRef.put(filename, metadata).then(function () {
+        photoRef
+        .getDownloadURL() //get URL of the uploade file
+        .then(function (url) {
+          console.log(url); // Save the URL into users collection
+          db.collection("mapmenu").doc(id).update({
+            image_map: url,
+          });
+         
+        });
+    });
+  }
