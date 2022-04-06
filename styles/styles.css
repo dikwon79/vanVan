@@ -8,14 +8,27 @@
     --font-on-dark: #fffff8;
 }
 
-.foodtruck-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.foodtruck-card,
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+
 }
 
 .foodtruck-card img {
-    width: 200px;
+    width: 300px;
+}
+
+.card__information {
+    display: flex;
+    font-size: 1.3rem;
+}
+
+.card__information__text__user-interested {
+    display: flex;
 }
 
 html,
