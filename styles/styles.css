@@ -8,14 +8,16 @@
     --font-on-dark: #fffff8;
 }
 
-.foodtruck-card,
-.cards {
+.foodtruck-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+}
 
+.cards {
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
 }
 
 .foodtruck-card img {
@@ -201,12 +203,7 @@ input[type="text"]:placeholder-shown {
 }
 
 
-.cards {
-    margin: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-}
+
 
 .card {
     text-align: center;
@@ -235,7 +232,7 @@ a {
     font-size: 1.3rem;
 }
 
-@media screen and (max-width: 1088px) {
+/* @media screen and (max-width: 1088px) {
     body {
         display: flex;
         flex-direction: column;
@@ -320,4 +317,4 @@ a {
     #map {
         height: 50%;
     }
-}
+} */
