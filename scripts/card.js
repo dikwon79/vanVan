@@ -62,6 +62,7 @@ function getdata() {
         }
         i++;
       });
+     
       console.log(html);
       document.getElementById("carddata").innerHTML = html;
     });

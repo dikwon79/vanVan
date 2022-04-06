@@ -43,7 +43,7 @@ function writeSubmit() {
                         console.log(doc.id);
                         let picture = document.getElementById("fileUpload");
                         uploadimage(doc.id, picture.files[0]);
-                        window.location.href = "card.html";
+                        
                         
 
                     })
@@ -70,7 +70,7 @@ function uploadimage(id, filename) {
           db.collection("mapmenu").doc(id).update({
             image_map: url,
           });
-         
+          window.location.href = "card.html";
         });
     });
   }
