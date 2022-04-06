@@ -8,6 +8,16 @@
     --font-on-dark: #fffff8;
 }
 
+.foodtruck-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+}
+
+.foodtruck-card img {
+    width: 200px;
+}
+
 html,
 body {
     background-color: var(--neutral-color);
