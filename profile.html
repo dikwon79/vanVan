@@ -37,10 +37,18 @@
                     <input type="file" id="file">
                     <label for="file" id="uploadBtn">Choose a photo</label>
                 </div>
+                
             </div>
-            <div class="username">Jun Ho Han</div>
-            <div class="date">Joined Date: Mar 6, 2022</div>
+            <div class="user-info text-center flex-column align-content-center">
+                <i id="user" class="fa fa-solid fa-circle-user"></i>
+                
+            </div>
             <input type="text" value="Edit" class="edit">
+        </div>
+        <div class="user-info text-center flex-column align-content-center p-5 m-5">
+          
+            <h3 id="username" class="text-center">User ID:</h3>
+            <h3 id="userdate" class="text-center">Joined Date:</h3>
         </div>
         <div class="timeline">
             <div class="timeline-title">
@@ -65,7 +73,7 @@
     </div>
     <nav id="footerPlaceholder"></nav>
     <script src="./scripts/firebaseAPI_team21.js"></script>
-    <script src="./scripts/profile.js" defer></script>
+    <script src="./scripts/profile.js"></script>
     <script src="./scripts/skeleton.js"></script>
 </body>
 

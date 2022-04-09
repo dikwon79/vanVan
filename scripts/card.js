@@ -48,7 +48,7 @@ function getdata() {
           }
           i++;
         });
-        console.log(mark);
+        console.log(html);
         document.getElementById("carddata").innerHTML = html;
       });
   }
